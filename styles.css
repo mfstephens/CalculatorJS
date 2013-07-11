@@ -41,10 +41,11 @@ h4 {
 }
 
 .text-field-container {
-	
+
 }
 
 .text-field-input {
 	width: 18.8em;
 	margin-left: .3em;
+	text-align: right;
 }
