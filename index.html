@@ -5,28 +5,37 @@
   <title>The HTML5 Herald</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-	<div>
-		<input type="button" value="7"/>
-		<input type="button" value="8"/>
-		<input type="button" value="9"/>
+<body class="main">
+	<div class="header">
+		<h1>CalculatorJS</h1>
 	</div>
-	<div>
-		<input type="button" value="4"/>
-		<input type="button" value="5"/>
-		<input type="button" value="6"/>
+	<div class="calculator">
+		<div class="button-row">
+			<input type="button" class="calculator-button" value="7"/>
+			<input type="button" class="calculator-button" value="8"/>
+			<input type="button" class="calculator-button" value="9"/>
+			<input type="button" class="calculator-button" value="/"/>
+		</div>
+		<div class="button-row">
+			<input type="button" class="calculator-button" value="4"/>
+			<input type="button" class="calculator-button" value="5"/>
+			<input type="button" class="calculator-button" value="6"/>
+			<input type="button" class="calculator-button" value="x"/>
+		</div>
+		<div class="button-row">
+			<input type="button" class="calculator-button" value="1"/>
+			<input type="button" class="calculator-button" value="2"/>
+			<input type="button" class="calculator-button" value="3"/>
+			<input type="button" class="calculator-button" value="-"/>
+		</div>
+		<div class="button-row">
+			<input type="button" class="calculator-button" value="0"/>
+			<input type="button" class="calculator-button" value="."/>
+			<input type="button" class="calculator-button" value="="/>
+			<input type="button" class="calculator-button" value="+"/>
+		</div>
 	</div>
-	<div>
-		<input type="button" value="1"/>
-		<input type="button" value="2"/>
-		<input type="button" value="3"/>
-	</div>
-	<div>
-		<input type="button" value="0"/>
-		<input type="button" value="."/>
-		<input type="button" value="="/>
-	</div>
-	<div></div>
 </body>
 </html>

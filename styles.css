@@ -1,0 +1,41 @@
+@font-face {
+	font-family: Cabin-SemiBold;
+	font-weight: bold;
+	src: url("fonts/Cabin-SemiBold.otf") format("opentype");
+}
+
+* { 
+	font-family: Cabin-SemiBold;
+	color: #333;
+}
+
+.main {
+	margin: 0 auto;
+	width: 20em;
+}
+
+.calculator {
+	width: 17em;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 4em;
+}
+
+h4 {
+	font-size: 2em;
+}
+
+.button-row {
+
+}
+
+.calculator-button {
+	border: none;
+	height: 3em;
+	width: 3em;
+	margin: .5em;
+	font-family: Cabin-SemiBold;
+	font-size: 1em;
+}
