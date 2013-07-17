@@ -1,8 +1,5 @@
-function fillInputField(input) {
-	$(".text-field-input").html($(".text-field-input").html() + input);
-}
-
-function getInputField() {
+function inputField(input) {
+	$(".text-field-input").html(input);
 	return $(".text-field-input").html();
 }
 
@@ -21,85 +18,85 @@ function evaluateInput(input) {
 
 (function() {
 	$("#seven").click(function() {
-		fillInputField("7");
+		inputField(inputField() + "7");
 	});
 
 	$("#eight").click(function() {
-		fillInputField("8");
+		inputField(inputField() + "8");
 	});
 
 	$("#nine").click(function() {
-		fillInputField("9");
+		inputField(inputField() + "9");
 	});
 
 	$("#divide").click(function() {
-		// fillInputField(&#247;);
+		inputField(inputField() + "/");
 	});
 
 	$("#four").click(function() {
-		fillInputField("4");
+		inputField(inputField() + "4");
 	});
 
 	$("#five").click(function() {
-		fillInputField("5");
+		inputField(inputField() + "5");
 	});
 
 	$("#six").click(function() {
-		fillInputField("6");
+		inputField(inputField() + "6");
 	});
 
 	$("#multiply").click(function() {
-		fillInputField("x");
+		inputField(inputField() + "x");
 	});
 
 	$("#one").click(function() {
-		fillInputField("1");
+		inputField(inputField() + "1");
 	});
 
 	$("#two").click(function() {
-		fillInputField("2");
+		inputField(inputField() + "2");
 	});
 
 	$("#three").click(function() {
-		fillInputField("3");
+		inputField(inputField() + "3");
 	});
 
 	$("#subtract").click(function() {
-		fillInputField("-");
+		inputField(inputField() + "-");
 	});
 
 	$("#zero").click(function() {
-		fillInputField("0");
+		inputField(inputField() + "0");
 	});
 
 	$("#decimal").click(function() {
-		fillInputField(".");
+		inputField(inputField() + ".");
 	});
 
 	$("#equal").click(function() {
-		var input = getInputField();
+		var input = inputField();
 		var parsedInput = parseInputField(input);
 		evaluateInput(parsedInput);
 	});
 
 	$("#add").click(function() {
-		fillInputField("+");
+		inputField(inputField() + "+");
 	});
 
 	$("#left-parens").click(function() {
-		fillInputField("(");
+		inputField(inputField() + "(");
 	});
 
 	$("#right-parens").click(function() {
-		fillInputField(")");
+		inputField(inputField() + ")");
 	});
 
 	$("#square-root").click(function() {
-		fillInputField("sqrt");
+		inputField(inputField() + "sqrt");
 	});
 
 	$("#clear").click(function() {
-		var shortenedInputString = getInputField();
+		var shortenedInputString = inputField();
 		$(".text-field-input").html(shortenedInputString.substring(0, shortenedInputString.length - 1));
 	});
 
@@ -110,7 +107,7 @@ function evaluateInput(input) {
        		var key = e.which;
        		switch(key) {
        			case 48: case 96:
-       				fillInputField("0");
+       				inputField(inputField() + "0");
        				break;
        			case 49: case 97:
        				fillInputField("1");
