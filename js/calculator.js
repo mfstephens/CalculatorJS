@@ -11,29 +11,12 @@ function parseInputField(input) {
 }
 
 function evaluateInput(input) {
-	alert(eval(input));
-}
-
-function errorCheckInput(input) {
-	// for(var i = 0; i < input.length; ++i) {
-	// 	switch(input[i]) {
-	// 		case "/":
-	// 			return false;
-	// 			break;
-	// 		case "x":
-	// 			return false;
-	// 			break;
-	// 		case "-":
-	// 			return false;
-	// 			break;
-	// 		case "+":
-	// 			return false;
-	// 			break;
-	// 		default:
-	// 			return true;
-	// 			break;
-	// 	}
-	// }
+	try {
+		alert(eval(input));
+	}
+	catch(e) {
+		$(".text-field-input").html("Error");
+	}
 }
 
 (function() {
@@ -95,7 +78,6 @@ function errorCheckInput(input) {
 
 	$("#equal").click(function() {
 		var input = getInputField();
-		errorCheckInput(input);
 		var parsedInput = parseInputField(input);
 		evaluateInput(parsedInput);
 	});
