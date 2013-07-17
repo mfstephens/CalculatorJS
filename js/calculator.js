@@ -1,5 +1,39 @@
 function fillInputField(input) {
-	$(".text-field-input").val($(".text-field-input").val() + input);
+	$(".text-field-input").html($(".text-field-input").html() + input);
+}
+
+function getInputField() {
+	return $(".text-field-input").html();
+}
+
+function parseInputField(input) {
+	return input.replace(/x/g, "*");
+}
+
+function evaluateInput(input) {
+	alert(eval(input));
+}
+
+function errorCheckInput(input) {
+	// for(var i = 0; i < input.length; ++i) {
+	// 	switch(input[i]) {
+	// 		case "/":
+	// 			return false;
+	// 			break;
+	// 		case "x":
+	// 			return false;
+	// 			break;
+	// 		case "-":
+	// 			return false;
+	// 			break;
+	// 		case "+":
+	// 			return false;
+	// 			break;
+	// 		default:
+	// 			return true;
+	// 			break;
+	// 	}
+	// }
 }
 
 (function() {
@@ -16,7 +50,7 @@ function fillInputField(input) {
 	});
 
 	$("#divide").click(function() {
-		fillInputField("/");
+		// fillInputField(&#247;);
 	});
 
 	$("#four").click(function() {
@@ -60,11 +94,30 @@ function fillInputField(input) {
 	});
 
 	$("#equal").click(function() {
-		fillInputField("=");
+		var input = getInputField();
+		errorCheckInput(input);
+		var parsedInput = parseInputField(input);
+		evaluateInput(parsedInput);
 	});
 
 	$("#add").click(function() {
 		fillInputField("+");
+	});
+
+	$("#left-parens").click(function() {
+		fillInputField("(");
+	});
+
+	$("#right-parens").click(function() {
+		fillInputField(")");
+	});
+
+	$("#square-root").click(function() {
+		fillInputField("sqrt");
+	});
+
+	$("#clear").click(function() {
+		$(".text-field-input").html("");
 	});
 
 
@@ -104,10 +157,9 @@ function fillInputField(input) {
 	       			fillInputField("9");
        				break;
        			case 106:
-       				fillInputField("x");+
+       				fillInputField("x");
        				break;
        			case 107:
-       			alert("add");
        				fillInputField("+");
        				break;
        			case 109:
