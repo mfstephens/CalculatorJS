@@ -117,7 +117,8 @@ function errorCheckInput(input) {
 	});
 
 	$("#clear").click(function() {
-		$(".text-field-input").html("");
+		var shortenedInputString = getInputField();
+		$(".text-field-input").html(shortenedInputString.substring(0, shortenedInputString.length - 1));
 	});
 
 
