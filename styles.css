@@ -1,0 +1,47 @@
+@font-face {
+	font-family: Cabin-SemiBold;
+	font-weight: bold;
+	src: url("fonts/Cabin-SemiBold.otf") format("opentype");
+}
+
+* { 
+	font-family: Cabin-SemiBold;
+	color: #333;
+}
+
+.main {
+	margin: 0 auto;
+	width: 20em;
+}
+
+.calculator {
+	width: 17em;
+	margin: 0 auto;
+}
+
+.title {
+	font-size: 4em;
+	width: 4.4em;
+	margin: 0 auto;
+}
+
+.calculator-button {
+	border: none;
+	height: 3em;
+	width: 3em;
+	margin: .5em;
+	font-family: Cabin-SemiBold;
+	font-size: 1em;
+	cursor: pointer;
+}
+
+.text-field-container {
+	border: 100px;
+	border-color: #333;
+}
+
+.text-field-input {
+	width: 18.8em;
+	margin-left: .3em;
+	text-align: right;
+}

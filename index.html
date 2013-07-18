@@ -2,31 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>The HTML5 Herald</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
+  <title>Calculator: Pure HTML5 Calculator</title>
+  <meta name="description" content="Calculator: Pure HTML5 Calculator">
+  <meta name="author" content="Matthew Stephens">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-	<div>
-		<input type="button" value="7"/>
-		<input type="button" value="8"/>
-		<input type="button" value="9"/>
+<body class="main">
+	<div class="header">
+		<div class="title">Calculator</div>
 	</div>
-	<div>
-		<input type="button" value="4"/>
-		<input type="button" value="5"/>
-		<input type="button" value="6"/>
+	<div class="calculator">
+		<div class="text-field-container">
+			<span class="text-field-input"></span>
+		</div>
+		<div class="button-row">
+			<input type="button" id="left-parens" class="calculator-button" value="("/>
+			<input type="button" id="right-parens" class="calculator-button" value=")"/>
+			<input type="button" id="square-root" class="calculator-button" value="sqrt"/>
+			<input type="button" id="clear" class="calculator-button" value="CE"/>
+		</div>
+		<div class="button-row">
+			<input type="button" id="seven" class="calculator-button" value="7"/>
+			<input type="button" id="eight" class="calculator-button" value="8"/>
+			<input type="button" id="nine" class="calculator-button" value="9"/>
+			<input type="button" id="divide" class="calculator-button" value=&divide; />
+		</div>
+		<div class="button-row">
+			<input type="button" id="four" class="calculator-button" value="4"/>
+			<input type="button" id="five" class="calculator-button" value="5"/>
+			<input type="button" id="six" class="calculator-button" value="6"/>
+			<input type="button" id="multiply" class="calculator-button" value="x"/>
+		</div>
+		<div class="button-row">
+			<input type="button" id="one" class="calculator-button" value="1"/>
+			<input type="button" id="two" class="calculator-button" value="2"/>
+			<input type="button" id="three" class="calculator-button" value="3"/>
+			<input type="button" id="subtract" class="calculator-button" value="-"/>
+		</div>
+		<div class="button-row">
+			<input type="button" id="zero" class="calculator-button" value="0"/>
+			<input type="button" id="decimal" class="calculator-button" value="."/>
+			<input type="button" id="equal" class="calculator-button" value="="/>
+			<input type="button" id="add" class="calculator-button" value="+"/>
+		</div>
 	</div>
-	<div>
-		<input type="button" value="1"/>
-		<input type="button" value="2"/>
-		<input type="button" value="3"/>
-	</div>
-	<div>
-		<input type="button" value="0"/>
-		<input type="button" value="."/>
-		<input type="button" value="="/>
-	</div>
-	<div></div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/calculator.js"></script>
 </body>
 </html>
