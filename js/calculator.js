@@ -12,7 +12,7 @@ function evaluateInput(input) {
 		alert(eval(input));
 	}
 	catch(e) {
-		$(".text-field-input").html("Error");
+		inputField("Error");
 	}
 }
 
@@ -97,7 +97,7 @@ function evaluateInput(input) {
 
 	$("#clear").click(function() {
 		var shortenedInputString = inputField();
-		$(".text-field-input").html(shortenedInputString.substring(0, shortenedInputString.length - 1));
+		inputField(shortenedInputString.substring(0, shortenedInputString.length - 1));
 	});
 
 
