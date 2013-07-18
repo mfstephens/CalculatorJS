@@ -37,7 +37,7 @@
 
 .text-field-container {
 	margin: 0 auto;
-	width: 250px;
+	width: 15.625em;
 }
 
 .text-field-input {
@@ -45,11 +45,12 @@
 	height: 20px;
 	padding: .5em;
 	text-align: right;
+	letter-spacing: 10px;
 }
 
 .button-row-container {
 	margin: 0 auto;
-	width: 250px;
+	width: 15.625em;
 }
 
 .first {
