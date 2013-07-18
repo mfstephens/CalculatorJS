@@ -36,12 +36,28 @@
 }
 
 .text-field-container {
-	border: 100px;
-	border-color: #333;
+	margin: 0 auto;
+	width: 250px;
 }
 
 .text-field-input {
-	width: 18.8em;
-	margin-left: .3em;
+	border: .1em solid #333;
+	height: 20px;
+	padding: .5em;
 	text-align: right;
+}
+
+.button-row-container {
+	margin: 0 auto;
+	width: 250px;
+}
+
+.first {
+	margin-top: 0 !important;
+	margin-left: 0 !important;
+}
+
+.last {
+	margin-bottom: 0 !important;
+	margin-right: 0 !important;
 }
