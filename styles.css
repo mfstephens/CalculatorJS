@@ -30,7 +30,6 @@
 	height: 3em;
 	width: 3em;
 	margin: .5em;
-	font-family: Cabin-SemiBold;
 	font-size: 1em;
 	cursor: pointer;
 }
@@ -42,15 +41,16 @@
 
 .text-field-input {
 	border: .1em solid #333;
-	height: 20px;
+	height: 1em;
 	padding: .5em;
 	text-align: right;
-	letter-spacing: 10px;
+	letter-spacing: .4em;
 }
 
-.button-row-container {
-	margin: 0 auto;
+.button-row-container 
+{	margin: 0 auto;
 	width: 15.625em;
+	white-space: nowrap;
 }
 
 .first {
