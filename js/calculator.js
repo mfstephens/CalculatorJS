@@ -1,15 +1,21 @@
 function inputField(input) {
 	$(".text-field-input").html(input);
+	if($(".text-field-input").html() === "Error") {
+		return "0";	
+	}
 	return $(".text-field-input").html();
 }
 
 function parseInputField(input) {
-	return input.replace(/x/g, "*");
+	var parsedInput = input.replace(/√/g, "Math.sqrt");
+	parsedInput = parsedInput.replace(/x/g, "*");
+	parsedInput = parsedInput.replace(/÷/g, "/");
+	return parsedInput;
 }
 
 function evaluateInput(input) {
 	try {
-		alert(eval(input));
+		inputField(eval(input));
 	}
 	catch(e) {
 		inputField("Error");
@@ -30,7 +36,7 @@ function evaluateInput(input) {
 	});
 
 	$("#divide").click(function() {
-		inputField(inputField() + "/");
+		inputField(inputField() + " ÷ ");
 	});
 
 	$("#four").click(function() {
@@ -46,7 +52,7 @@ function evaluateInput(input) {
 	});
 
 	$("#multiply").click(function() {
-		inputField(inputField() + "x");
+		inputField(inputField() + " x ");
 	});
 
 	$("#one").click(function() {
@@ -62,7 +68,7 @@ function evaluateInput(input) {
 	});
 
 	$("#subtract").click(function() {
-		inputField(inputField() + "-");
+		inputField(inputField() + " - ");
 	});
 
 	$("#zero").click(function() {
@@ -77,10 +83,11 @@ function evaluateInput(input) {
 		var input = inputField();
 		var parsedInput = parseInputField(input);
 		evaluateInput(parsedInput);
+		$("#clear").val("AC");
 	});
 
 	$("#add").click(function() {
-		inputField(inputField() + "+");
+		inputField(inputField() + " + ");
 	});
 
 	$("#left-parens").click(function() {
@@ -92,12 +99,26 @@ function evaluateInput(input) {
 	});
 
 	$("#square-root").click(function() {
-		inputField(inputField() + "sqrt");
+		inputField(inputField() + "√(");
 	});
 
 	$("#clear").click(function() {
-		var shortenedInputString = inputField();
-		inputField(shortenedInputString.substring(0, shortenedInputString.length - 1));
+		if($("#clear").val() === "AC") {
+			inputField("0");
+			$("#clear").val("CE");
+		}
+		else {
+			var shortenedInputString = inputField();
+			if(shortenedInputString[shortenedInputString.length - 1] === " ") {
+				inputField(shortenedInputString.substring(0, shortenedInputString.length - 3));
+			}
+			else {
+				inputField(shortenedInputString.substring(0, shortenedInputString.length - 1));
+			}
+		}
+		if(inputField() === "") {
+			inputField("0");
+		}
 	});
 
 
