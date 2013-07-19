@@ -3,6 +3,10 @@ function inputField(input) {
 	if($(".text-field-input").html() === "Error") {
 		return "0";	
 	}
+	else if($("#clear").val() === "AC") {
+		$("#clear").val("CE");
+		return "";
+	}
 	return $(".text-field-input").html();
 }
 
