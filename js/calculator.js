@@ -1,9 +1,26 @@
+function isOperator(input) {
+	if(input !== undefined) {
+		switch(input[input.length - 2]) {
+			case "+":
+				return true;
+			case "-":
+				return true;
+			case "÷":
+				return true;
+			case "x":
+				return true;
+			default:
+				return false;
+		}
+	}
+}
+
 function inputField(input) {
 	$(".text-field-input").html(input);
 	if($(".text-field-input").html() === "Error") {
 		return "0";	
 	}
-	else if($("#clear").val() === "AC") {
+	else if(($("#clear").val() === "AC" && !isOperator(input)) || $(".text-field-input").html() === "0") {
 		$("#clear").val("CE");
 		return "";
 	}
