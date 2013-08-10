@@ -20,9 +20,14 @@
 }
 
 .title {
-	font-size: 4em;
-	width: 4.4em;
+	font-size: 3.7em;
+	margin-left: -.08em;
+}
+
+.header {
+	width: 15.625em;
 	margin: 0 auto;
+	white-space: nowrap;
 }
 
 .calculator-button {
@@ -30,18 +35,34 @@
 	height: 3em;
 	width: 3em;
 	margin: .5em;
-	font-family: Cabin-SemiBold;
 	font-size: 1em;
 	cursor: pointer;
 }
 
 .text-field-container {
-	border: 100px;
-	border-color: #333;
+	margin: 0 auto;
+	width: 15.625em;
 }
 
 .text-field-input {
-	width: 18.8em;
-	margin-left: .3em;
+	border: .1em solid #333;
+	height: 1em;
+	padding: .5em;
 	text-align: right;
+}
+
+.button-row-container 
+{	margin: 0 auto;
+	width: 15.625em;
+	white-space: nowrap;
+}
+
+.first {
+	margin-top: 0 !important;
+	margin-left: 0 !important;
+}
+
+.last {
+	margin-bottom: 0 !important;
+	margin-right: 0 !important;
 }
